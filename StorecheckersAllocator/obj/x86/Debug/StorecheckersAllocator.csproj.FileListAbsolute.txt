@@ -1,0 +1,9 @@
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.exe.config
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.exe
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.pdb
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.Properties.Resources.resources
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.csproj.GenerateResource.Cache
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.exe
+C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\ShopperDatabase.mdf
+C:\Users\user\Documents\Visual Studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\ShopperDatabase_log.ldf
