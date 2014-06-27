@@ -10,8 +10,10 @@ namespace StorecheckersAllocator
     // Class to provide generic database commands and functionality
     public class DatabaseHelper
     {
+        // Connection string
+        readonly string connectionString;
+
         string database;
-        SqlConnection dbConnection;
 
         public string Database { get { return database; } }
 
@@ -19,80 +21,80 @@ namespace StorecheckersAllocator
         public DatabaseHelper(string database)
         {
             this.database = database;
-
-            OpenDatabase();
+            connectionString = "AttachDbFilename=|DataDirectory|\\" + database + ".mdf;" +
+                "Data Source=.\\SQLEXPRESS;Integrated Security=True;User Instance=True";
         }
 
-        // Method opens database and creates table if necessary.
-        private void OpenDatabase()
-        {
-            // Set connection string
-            string connectionString = "AttachDbFilename=|DataDirectory|\\" + database + ".mdf;" +
-            "Data Source=.\\SQLEXPRESS;Integrated Security=True;User Instance=True";
-
-
-            // Create DB connection
-            dbConnection = new SqlConnection(connectionString);
-
-            // Open DB
-            try
-            {
-                dbConnection.Open();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        // Close DB
-        public void CloseDatabase()
-        {
-            try
-            {
-                dbConnection.Close();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
 
         // Method to execute a non query command
         public void ExecuteNonQuery(string commandString)
         {
-            SqlCommand command = new SqlCommand(commandString, dbConnection);
+            using (SqlConnection dbConnection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(commandString, dbConnection))
+                {
+                    try
+                    {
+                        dbConnection.Open();
 
-            command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException)
+                    {
+                        throw;
+                    }
+                }
+            }
         }
 
         // Execute non query command which uses parameters as defined in commandParameters parameter
-        public void ExecuteNonQueryWithParams(string commandString, Dictionary<string, object> commandParameters)
+        public void ExecuteNonQueryWithParams(string commandString, SqlCommand commandWithParameters)
         {
-            SqlCommand command = new SqlCommand(commandString, dbConnection);
-
-            foreach (KeyValuePair<string, object> kvp in commandParameters)
+            using (SqlConnection dbConnection = new SqlConnection(connectionString))
             {
-                command.Parameters.Add(new SqlParameter(kvp.Key, kvp.Value));
-            }
+                try
+                {
+                    dbConnection.Open();
 
-            command.ExecuteNonQuery();
+                    commandWithParameters.CommandText = commandString;
+                    commandWithParameters.Connection = dbConnection;
+
+                    commandWithParameters.ExecuteNonQuery();
+                }
+                catch
+                {   
+                    throw;
+                }
+            }
         }
 
         public void PrintQuery(string commandString)
         {
-            SqlCommand command = new SqlCommand(commandString, dbConnection);
-
-            SqlDataReader reader = command.ExecuteReader();
-            
-            while (reader.Read())
+            using (SqlConnection dbConnection = new SqlConnection(connectionString))
             {
-                Console.Write("| ");
-                for (int i = 0; i < reader.FieldCount; i++)
+                using (SqlCommand command = new SqlCommand(commandString, dbConnection))
                 {
-                    Console.Write(reader[i] + " | ");
+                    try
+                    {
+                        dbConnection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            Console.Write("| ");
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                Console.Write(reader[i] + " | ");
+                            }
+                            Console.WriteLine();
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
                 }
-                Console.WriteLine();
             }
         }
 

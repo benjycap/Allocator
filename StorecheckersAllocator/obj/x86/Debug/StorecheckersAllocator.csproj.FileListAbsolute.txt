@@ -7,3 +7,13 @@ C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\Store
 C:\Users\user\documents\visual studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\ShopperDatabase.mdf
 C:\Users\user\Documents\Visual Studio 2010\Projects\StorecheckersAllocator\StorecheckersAllocator\bin\Debug\ShopperDatabase_log.ldf
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.exe.config
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.exe
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.pdb
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Debug\ShopperDatabase.mdf
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Debug\ShopperDatabase_log.ldf
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.exe
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Debug\StorecheckersAllocator.pdb
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.Properties.Resources.resources
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.csproj.GenerateResource.Cache
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Debug\StorecheckersAllocator.csprojResolveAssemblyReference.cache

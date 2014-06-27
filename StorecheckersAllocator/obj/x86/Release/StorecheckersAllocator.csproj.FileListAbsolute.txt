@@ -1,0 +1,10 @@
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Release\StorecheckersAllocator.csprojResolveAssemblyReference.cache
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Release\StorecheckersAllocator.Properties.Resources.resources
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Release\StorecheckersAllocator.csproj.GenerateResource.Cache
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Release\ShopperDatabase.mdf
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Release\ShopperDatabase_log.ldf
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Release\StorecheckersAllocator.exe.config
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Release\StorecheckersAllocator.exe
+C:\gitrepo\Allocator\StorecheckersAllocator\bin\Release\StorecheckersAllocator.pdb
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Release\StorecheckersAllocator.exe
+C:\gitrepo\Allocator\StorecheckersAllocator\obj\x86\Release\StorecheckersAllocator.pdb
