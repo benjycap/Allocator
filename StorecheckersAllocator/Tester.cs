@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using StorecheckersAllocator.ImportData;
+
 namespace StorecheckersAllocator
 {
     public static class Tester
@@ -10,7 +12,8 @@ namespace StorecheckersAllocator
         public static void Test()
         {
             ShopperImporter importer = new ShopperImporter();
-            importer.Run();
+            
+
         }
     }
 }
